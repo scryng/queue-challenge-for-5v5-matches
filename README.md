@@ -13,7 +13,7 @@
 
 ## DESCRIÇÃO DO DESAFIO:
 ###  1 - Sistema de fila
-Sistema de fila, grupos e times.
+#### Sistema de fila, grupos e times.
 
 > Olá Dev! Neste desafio, você precisará desenvolver uma solução que resolva o problema abaixo apresentado, conforme os detalhes e regras apresentados no presente.
 
@@ -41,3 +41,140 @@ Sistema de fila, grupos e times.
 > A preservação dos grupo;
 > A definição dos times de ataque e defesa da times partida;
 > O consumo de uma função (Fictícia), quando os times estiverem prontos para iniciar a partida.
+
+
+#### DADOS DA FILA:
+
+Utilize a Table a seguir como dados de fila, onde determinados grupos de jogadores estão buscando pela formação de times e partida.
+
+```
+Queue = {
+    ['group:1'] = {
+        players = {
+            [1] = {
+                nick = 'ViperGT',
+                leader = true
+            }
+        }
+    },
+    ['group:4'] = {
+        players = {
+            [2] = {
+                nick = 'BlazeGamer',
+                leader = false
+            },
+            [3] = {
+                nick = 'SpeedRacer',
+                leader = false
+            },
+            [4] = {
+                nick = 'ShadowNinja',
+                leader = true
+            },
+            [5] = {
+                nick = 'PhoenixFire',
+                leader = false
+            }
+        }
+    },
+    ['group:6'] = {
+        players = {
+            [6] = {
+                nick = 'ThunderBolt',
+                leader = true
+            },
+            [7] = {
+                nick = 'GhostRider',
+                leader = false
+            }
+        }
+    },
+    ['group:9'] = {
+        players = {
+            [8] = {
+                nick = 'NeonSpectre',
+                leader = false
+            },
+            [9] = {
+                nick = 'DriftKing',
+                leader = true
+            }
+        }
+    },
+    ['group:10'] = {
+        players = {
+            [10] = {
+                nick = 'MidnightWolf',
+                leader = true
+            }
+        }
+    }
+}
+```
+
+#### EXEMPLO ESPERADO:
+
+A Table abaixo é um exemplo do resultado esperado, onde foram formados dois times, seguindo as soluções requeridas.
+
+```
+Teams = {
+    attackers = {
+        players = {
+            [10] = {
+                nick = 'MidnightWolf',
+                group = 'group:10',
+                leader = true
+            },
+            [2] = {
+                nick = 'BlazeGamer',
+                group = 'group:4',
+                leader = false
+            },
+            [3] = {
+                nick = 'SpeedRacer',
+                group = 'group:4',
+                leader = false
+            },
+            [4] = {
+                nick = 'ShadowNinja',
+                group = 'group:4',
+                leader = true
+            },
+            [5] = {
+                nick = 'PhoenixFire',
+                group = 'group:4',
+                leader = false
+            }
+        }
+    },
+    defenders = {
+        players = {
+            [6] = {
+                nick = 'ThunderBolt',
+                group = 'group:6',
+                leader = true
+            },
+            [7] = {
+                nick = 'GhostRider',
+                group = 'group:6',
+                leader = false
+            }
+            [8] = {
+                nick = 'NeonSpectre',
+                group = 'group:9',
+                leader = false
+            },
+            [9] = {
+                nick = 'DriftKing',
+                group = 'group:9',
+                leader = true
+            }
+            [1] = {
+                nick = 'ViperGT',
+                group = 'group:1',
+                leader = true
+            }
+        }
+    }
+}
+```
