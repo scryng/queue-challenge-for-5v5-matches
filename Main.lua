@@ -1,7 +1,8 @@
--- Importing Player, Group and Queue classes
+-- Importing Player, Group, Queue and Match classes
 dofile("Player.lua")
 dofile("Group.lua")
 dofile("Queue.lua")
+dofile("Match.lua")
 
 -- Instantiating players using the Player class and adding them to groups with the Group class
 
@@ -89,3 +90,51 @@ end
 print("")
 print("Queue: " .. queue:toString())
 print("")
+
+-- Creating the match using queue groups
+local groupsInQueue = queue:getGroups()
+local match = Match:new(groupsInQueue)
+
+-- Removing teams that started the match from the queue and setting status to false
+group1:setStatus(false)
+queue:dequeue(group1)
+group4:setStatus(false)
+queue:dequeue(group4)
+group6:setStatus(false)
+queue:dequeue(group6)
+group9:setStatus(false)
+queue:dequeue(group9)
+group10:setStatus(false)
+queue:dequeue(group10)
+
+local attackersOutput = "Attacker players: "
+for i, player in ipairs(match:getAttackers()) do
+    if i > 1 then
+        attackersOutput = attackersOutput .. ", "
+    end
+    attackersOutput = attackersOutput .. player:getNick()
+end
+print("")
+print(attackersOutput)
+
+local defendersOutput = "Defender players: "
+for i, player in ipairs(match:getDefenders()) do
+    if i > 1 then
+        defendersOutput = defendersOutput .. ", "
+    end
+    defendersOutput = defendersOutput .. player:getNick()
+end
+print("")
+print(defendersOutput)
+print("")
+
+-- Game timing simulation
+for i = 15, 0, -1 do
+    print("Remaining time " .. i .. " seconds.")
+end
+
+-- Simulation of players returning to the queue
+queue:requeue(match:getGroups())
+
+print("")
+print("Queue after game: " .. queue:toString())

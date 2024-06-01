@@ -37,6 +37,13 @@ function Queue:new(capacity)
         end
         error("The especified group not is in this Queue.")
     end
+
+    -- Requeue groups again
+    function queue:requeue(completedGroups)
+        for _, group in ipairs(completedGroups) do
+            self:enqueue(group)
+        end
+    end
     
     -- Get queue size
     function queue:size()
