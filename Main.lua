@@ -1,6 +1,7 @@
--- Importing Player and Group classes
+-- Importing Player, Group and Queue classes
 dofile("Player.lua")
 dofile("Group.lua")
+dofile("Queue.lua")
 
 -- Instantiating players using the Player class and adding them to groups with the Group class
 
@@ -50,8 +51,41 @@ local group10 = Group:new()
 group10:addPlayer(player10)
 player1:setGroup(group10)
 
+
+print("")
 print("Group 1: " .. group1:toString())
 print("Group 4: " .. group4:toString())
 print("Group 6: " .. group6:toString())
 print("Group 9: " .. group9:toString())
 print("Group 10: " .. group10:toString())
+
+-- Simulating that the team is ready to join the queue
+group1:setStatus(true)
+group4:setStatus(true)
+group6:setStatus(true)
+group9:setStatus(true)
+group10:setStatus(true)
+
+-- Creating Queue
+local queue = Queue:new()
+
+-- Adding teams that have true status to the queue
+if group1:getStatus() == true then
+    queue:enqueue(group1)
+end
+if group4:getStatus() == true then
+    queue:enqueue(group4)
+end
+if group6:getStatus() == true then
+    queue:enqueue(group6)
+end
+if group9:getStatus() == true then
+    queue:enqueue(group9)
+end
+if group10:getStatus() == true then
+    queue:enqueue(group10)
+end
+
+print("")
+print("Queue: " .. queue:toString())
+print("")
