@@ -18,6 +18,12 @@
 #### Construtor: new()
 #### Métodos: getAmountPlayers(), setNewPlayerInAmount(), removePlayerOfAmount(), getStatus(), setStatus(status), addPlayer(player), getPlayers(), toString()
 
+##
+### Classe: Queue
+#### Sobre: Essa classe tende a simular a fila em que os grupos irão entrar para buscar por uma partida.
+#### Atributos: table groups; int capacity
+#### Construtor: new(capacity)
+#### Métodos: enqueue(group), dequeueLast(), dequeue(group), size(), isEmpty(), getGroups(), toString()
 
 ## DESCRIÇÃO DO DESAFIO:
 ###  1 - Sistema de fila

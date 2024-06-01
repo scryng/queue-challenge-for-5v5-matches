@@ -8,21 +8,26 @@ function Player:new(nick, leader)
     -- Attributes
     player.nick = nick
     player.leader = leader
-    player.group = "Sem grupo"
+    player.group = "No group"
     
     -- Methods
+
+    -- Get player nickname
     function player:getNick()
         return self.nick
     end
-    
+
+    -- Get group the player belongs to
     function player:getGroup()
         return self.group
     end
-    
+
+    -- Set group to player    
     function player:setGroup(group)
         self.group = group:toString()
     end
     
+    -- Check if the player is a leader
     function player:isLeader()
         return self.leader
     end
