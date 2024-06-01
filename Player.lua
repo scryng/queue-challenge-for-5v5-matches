@@ -30,7 +30,7 @@ function Player:new(nick, leader)
     -- toString()
     
     function player:toString()
-        return "{nick='" .. self.nick .. "', leader=" .. tostring(self.leader) .. "}"
+        return "{nick='" .. player.nick .. "', leader=" .. tostring(player.leader) .. "}"
     end
     
     return player
