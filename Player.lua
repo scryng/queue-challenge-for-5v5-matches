@@ -1,4 +1,4 @@
--- Definição da classe Player
+-- Player class definition
 Player = {}
 
 -- Constructor Method
@@ -10,7 +10,7 @@ function Player:new(nick, leader)
     player.leader = leader
     player.group = "Sem grupo"
     
-    -- Getters & Setters
+    -- Methods
     function player:getNick()
         return self.nick
     end
