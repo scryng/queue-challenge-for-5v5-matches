@@ -33,6 +33,45 @@
 #### Métodos: getAttackers(), getDefenders(), getGroups()
 #### Funções: formTeams(allPlayers)
 
+##
+### Classe: Main
+
+Saída do programa:
+
+```
+Group 1: {[1] = {nick='ViperGT', leader=true}}
+Group 4: {[1] = {nick='BlazeGamer', leader=false}, [2] = {nick='SpeedRacer', leader=false}, [3] = {nick='ShadowNinja', leader=true}, [4] = {nick='PhoenixFire', leader=false}}
+Group 6: {[1] = {nick='ThunderBolt', leader=true}, [2] = {nick='GhostRider', leader=false}}
+Group 9: {[1] = {nick='NeonSpectre', leader=false}, [2] = {nick='DriftKing', leader=true}}
+Group 10: {[1] = {nick='MidnightWolf', leader=true}}
+
+Queue: Queue {groups = {{[1] = {nick='ViperGT', leader=true}}, {[1] = {nick='BlazeGamer', leader=false}, [2] = {nick='SpeedRacer', leader=false}, [3] = {nick='ShadowNinja', leader=true}, [4] = {nick='PhoenixFire', leader=false}}, {[1] = {nick='ThunderBolt', leader=true}, [2] = {nick='GhostRider', leader=false}}, {[1] = {nick='NeonSpectre', leader=false}, [2] = {nick='DriftKing', leader=true}}, {[1] = {nick='MidnightWolf', leader=true}}} }
+
+
+Attacker players: ViperGT, SpeedRacer, PhoenixFire, GhostRider, DriftKing
+
+Defender players: BlazeGamer, ShadowNinja, ThunderBolt, NeonSpectre, MidnightWolf
+
+Remaining time 15 seconds.
+Remaining time 14 seconds.
+Remaining time 13 seconds.
+Remaining time 12 seconds.
+Remaining time 11 seconds.
+Remaining time 10 seconds.
+Remaining time 9 seconds.
+Remaining time 8 seconds.
+Remaining time 7 seconds.
+Remaining time 6 seconds.
+Remaining time 5 seconds.
+Remaining time 4 seconds.
+Remaining time 3 seconds.
+Remaining time 2 seconds.
+Remaining time 1 seconds.
+Remaining time 0 seconds.
+
+Queue after game: Queue {groups = {{[1] = {nick='ViperGT', leader=true}}, {[1] = {nick='BlazeGamer', leader=false}, [2] = {nick='SpeedRacer', leader=false}, [3] = {nick='ShadowNinja', leader=true}, [4] = {nick='PhoenixFire', leader=false}}, {[1] = {nick='ThunderBolt', leader=true}, [2] = {nick='GhostRider', leader=false}}, {[1] = {nick='NeonSpectre', leader=false}, [2] = {nick='DriftKing', leader=true}}, {[1] = {nick='MidnightWolf', leader=true}}} }
+```
+
 ## DESCRIÇÃO DO DESAFIO:
 ###  1 - Sistema de fila
 #### Sistema de fila, grupos e times.
