@@ -11,6 +11,14 @@
 #### Construtor: new(nick, leader)
 #### Métodos: getNick(), getGroup(), setGroup(), isLeader(), toString()
 
+##
+### Classe: Group
+#### Sobre: Essa classe tende a simular o Grupo que os jogadores irão formar antes de buscar por uma partida.
+#### Atributos: table players; boolean status; int maxPlayers; int amountPlayers
+#### Construtor: new()
+#### Métodos: getAmountPlayers(), setNewPlayerInAmount(), removePlayerOfAmount(), getStatus(), setStatus(status), addPlayer(player), getPlayers(), toString()
+
+
 ## DESCRIÇÃO DO DESAFIO:
 ###  1 - Sistema de fila
 #### Sistema de fila, grupos e times.
