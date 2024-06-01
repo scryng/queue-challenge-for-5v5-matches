@@ -25,6 +25,14 @@
 #### Construtor: new(capacity)
 #### Métodos: enqueue(group), dequeueLast(), dequeue(group), size(), isEmpty(), getGroups(), toString()
 
+##
+### Classe: Match
+#### Sobre: Essa classe tende a simular a junção dos grupos em uma equipe para jogar a partida.
+#### Atributos: table attackers; table defenders
+#### Construtor: new(groups)
+#### Métodos: getAttackers(), getDefenders(), getGroups()
+#### Funções: formTeams(allPlayers)
+
 ## DESCRIÇÃO DO DESAFIO:
 ###  1 - Sistema de fila
 #### Sistema de fila, grupos e times.
